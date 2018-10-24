@@ -68,16 +68,6 @@ class SegyIO_Shots():
                 retrieved_shot[i] = trace
         return retrieved_shot
     
-    def get_all_shots(self):
-        '''
-        Return dictionary of Numpy arrays
-        '''
-        all_shots = {}
-        for shot in self.shots:
-            all_shots[shot] = self.get_shot(shot)
-        return all_shots
-    
-    
     def __getitem__(self, key):
         shot_dict = {}
         
